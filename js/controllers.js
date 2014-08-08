@@ -14,8 +14,8 @@ triviaControllers.controller('QuestionListCtrl', ['$scope', 'FirebaseService', f
 }]);
 
 triviaControllers.controller('QuestionNewCtrl', ['$scope', '$location', 'FirebaseService', function($scope, $location, FirebaseService) {
-    $scope.question = {};
-    $scope.persistQuestion = function (question) {
+    $scope.question = {}
+    $scope.persistQuestion = function(question) {
         var firebaseUrl = "https://radiant-fire-4495.firebaseio.com/questions/";
         $scope.questions = $firebase(new Firebase(firebaseUrl));
         $scope.questions.$add(question).then(function(ref) {
