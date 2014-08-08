@@ -1,10 +1,10 @@
-var triviaApp = angular.module('triviaApp', ['ngRoute', 'triviaControllers']);
+var triviaApp = angular.module('triviaApp', ['ngAnimate', 'firebase', 'ngRoute', 'triviaControllers']);
 
 triviaApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/questions', {
             templateUrl: 'partials/question-list.html',
-            controller: 'QuestionsListCtrl'
+            controller: 'QuestionListCtrl'
         }).
         when('/questions/new', {
             templateUrl: 'partials/question-form.html',
